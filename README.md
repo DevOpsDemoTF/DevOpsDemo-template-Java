@@ -9,8 +9,8 @@ Micro-service template to use with my [DevOpsDemo](https://github.com/DevOpsDemo
 * TODO Configuration via environment variables
 * TODO Logging in JSON
 * TODO State passed to API handlers
-* TODO Health-check endpoint
-* TODO Prometheus metrics
+* Health-check endpoint
+* Prometheus metrics
 * Unit tests with JUnit-compatible output
 * API/integration tests with docker-compose
 
