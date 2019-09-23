@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class AppApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	public void success() {
 	}
 
 }
