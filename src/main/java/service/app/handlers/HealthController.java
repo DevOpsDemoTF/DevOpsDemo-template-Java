@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
-public class Health {
+public class HealthController {
     private final HealthEndpoint healthEndpoint;
 
-    public Health(HealthEndpoint healthEndpoint) {
+    public HealthController(HealthEndpoint healthEndpoint) {
         this.healthEndpoint = healthEndpoint;
     }
 
     @GetMapping("/health")
-    public void health() {
+    public void get_health() {
         var health = this.healthEndpoint.health();
         var status = health.getStatus();
 

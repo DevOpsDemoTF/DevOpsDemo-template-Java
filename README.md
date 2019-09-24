@@ -8,7 +8,7 @@ Micro-service template to use with my [DevOpsDemo](https://github.com/DevOpsDemo
 * Build in multi-stage Docker container
 * TODO Configuration via environment variables
 * TODO Logging in JSON
-* TODO State passed to API handlers
+* State passed to API handlers (via dependency injection)
 * Health-check endpoint
 * Prometheus metrics
 * Unit tests with JUnit-compatible output
@@ -19,3 +19,4 @@ Micro-service template to use with my [DevOpsDemo](https://github.com/DevOpsDemo
 * [Structured logging with JSON](https://stackoverflow.com/questions/54934658/how-to-write-slf4j-over-logback-logs-as-json)
 * [Spring RESTful services](https://spring.io/guides/gs/rest-service/)
 * [Prometheus metrics actor](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-metrics.html#production-ready-metrics-export-prometheus)
+* [Custom health-check](https://pivotal.io/application-modernization-recipes/observability/custom-health-checks-when-using-spring-boot-actuator)
