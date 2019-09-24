@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="service.app.util.LogJsonLayout"/>
+    </appender>
+    <root level="${LOG_LEVEL:-WARN}">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
