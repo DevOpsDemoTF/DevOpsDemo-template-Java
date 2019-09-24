@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class HealthState implements HealthIndicator {
-    private boolean healthy = false;
+    private boolean healthy = true;
 
     public void setHealthy() {
         this.healthy = true;
