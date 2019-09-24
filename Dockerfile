@@ -2,7 +2,7 @@ FROM gradle:jdk12 as build
 WORKDIR /app
 
 COPY --chown=gradle:gradle . /app
-RUN gradle installDist
+RUN gradle build
 RUN gradle test && cd build && tar -czf /app/test-results.tar.gz test-results/test/TEST-*.xml
 
 FROM openjdk:11-jre-slim
@@ -15,8 +15,8 @@ EXPOSE 9102
 
 ENV DEBUG_LEVEL "DEBUG"
 
-COPY --from=build /app/build/install/app /app/test-results.tar.gz /app/
+COPY --from=build /app/build/libs/app-1.0.0.jar /app/test-results.tar.gz /app/
 
 USER app
-ENTRYPOINT ["/bin/sh", "-c", "bin/app"]
+ENTRYPOINT ["java", "-jar", "/app/app-1.0.0.jar"]
 CMD []
